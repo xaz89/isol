@@ -1,0 +1,198 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+body {
+  position: absolute;
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: black;
+  /* Old browsers */
+  animation: example 1s;
+  -webkit-animation: example 1s;
+}
+
+section {
+  display: flex;
+  flex: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.division {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: 100% 100%;
+  flex-direction: row;
+}
+.division div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 50%;
+  align-items: center;
+  justify-content: center;
+}
+.division div:first-child {
+  background-color: black;
+  color: white;
+}
+.division div:first-child button {
+  color: white;
+  border-color: white;
+}
+.division div:nth-child(2) {
+  background-color: white;
+  color: black;
+}
+.division div:nth-child(2) button {
+  color: black;
+  border-color: black;
+}
+
+h1 {
+  font-size: 195px;
+  font-weight: 700;
+  letter-spacing: normal;
+  position: relative;
+  line-height: 0.8;
+  opacity: 1;
+  animation: centro 0.7s;
+  /*animation: centro 2s, grande 1s;
+  animation:  vuelta 1s, abajo 1s;
+  -webkit-animation: centro 0.7s;
+  -webkit-animation: centro 2s, grande 1s;
+  animation-direction: alternate;
+  */
+}
+h1 span {
+  letter-spacing: 30px;
+  text-align: right;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+p {
+  line-height: 1;
+}
+
+.izquierda {
+  position: relative;
+  text-align: right;
+  animation: izquierda 1s;
+  -webkit-animation: izquierda 1s;
+}
+
+.derecha {
+  position: relative;
+  text-align: left;
+  animation: derecha 1s;
+  -webkit-animation: derecha 1s;
+}
+
+.centro {
+  animation: centro 0.5s;
+  -webkit-animation: centro 0.5s;
+  text-align: center;
+}
+.centro p {
+  margin-top: -3.5rem;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+button {
+  border: 1px solid black;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+}
+
+@keyframes example {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: black;
+  }
+}
+@keyframes izquierda {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes derecha {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes centro {
+  from {
+    opacity: 0;
+    left: 100%;
+  }
+  to {
+    opacity: 1;
+    left: 0%;
+  }
+}
+@keyframes vuelta {
+  0% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@keyframes abajo {
+  to {
+    margin-bottom: 0;
+  }
+  from {
+    margin-bottom: 100%;
+  }
+}
+@keyframes grande {
+  from {
+    font-size: 19px;
+  }
+  to {
+    font-size: 195px;
+  }
+}
+
+/*# sourceMappingURL=isol.css.map */
