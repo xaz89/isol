@@ -42,13 +42,41 @@ section {
   align-items: center;
   justify-content: center;
 }
+.division div button {
+  padding: 0 2em;
+  margin: 1.5em;
+  line-height: 4;
+  position: relative;
+  border-color: gray;
+}
+.division div button:hover {
+  cursor: pointer;
+}
 .division div:first-child {
   background-color: black;
   color: white;
 }
 .division div:first-child button {
   color: white;
-  border-color: white;
+  background-color: black;
+}
+.division div:first-child button:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: white;
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.division div:first-child button:hover:before {
+  width: 100%;
 }
 .division div:nth-child(2) {
   background-color: white;
@@ -66,19 +94,36 @@ h1 {
   position: relative;
   line-height: 0.8;
   opacity: 1;
-  animation: centro 0.7s;
+  /* animation: centro 0.7s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s; */
   /*animation: centro 2s, grande 1s;
   animation:  vuelta 1s, abajo 1s;
   -webkit-animation: centro 0.7s;
   -webkit-animation: centro 2s, grande 1s;
   animation-direction: alternate;
-  */
+               */
 }
 h1 span {
   letter-spacing: 30px;
   text-align: right;
   font-weight: 100;
   font-size: 30px;
+}
+h1:hover {
+  transform: rotateX(55deg);
+  -webkit-transform: rotateX(55deg);
+  -moz-transform: rotateX(55deg);
+  -ms-transform: rotateX(55deg);
+  -o-transform: rotateX(55deg);
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 
 p {
