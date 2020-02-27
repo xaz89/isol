@@ -1,4 +1,4 @@
-html {
+html, body, * {
   padding: 0;
   margin: 0;
   box-sizing: 0;
@@ -6,14 +6,10 @@ html {
 
 body {
   position: absolute;
-  color: white;
+  color: black;
   width: 100%;
   height: 100%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: black;
-  /* Old browsers */
-  animation: example 1s;
-  -webkit-animation: example 1s;
 }
 
 section {
