@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,14 @@
     <link rel="stylesheet" href="./css/isol.css">
     <title>ISOL</title>
 </head>
+
+<style>
+    body{
+        background: salmon;
+    }
+</style>
 <body>
-<section>
+    <section>
         <div class="izquierda">
             <p>Frontend</p>
             <p>UiDev</p>
@@ -24,34 +31,95 @@
             <p>CSS</p>
             <p>JS</p>
         </div>
-    
-    
+
 
     </section>
     <section class="division">
-        <div>
+        <div class="book">
             <h2>book</h2>
-        <button><</button>
-    </div>
-        <div>
-            <h2>contacto</h2>
-            <button>></button>
+            <button class="btn">
+                <</button>
+            </div>
+            <div class="contacto">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.2 13.1">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                    stroke: #000;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 0.25px;
+                                }
+                            </style>
+                        </defs>
+                        <title>isol-trazo</title>
+                        <g id="Capa_2" data-name="Capa 2">
+                            <g id="Capa_2-2" data-name="Capa 2">
+                                <path id="isol-trazo" class="cls-1"
+                                    d="M.1,101.9s2,1,3-3c0,0-1,3,0,3s4-1,3-2,2-1,1,1-2,2-2,2,4-1,4-2,.5-1,1-1.4l1-.6s-3,2-1,4,3,1,3-1a4.4,4.4,0,0,0-1-3s-4,0-1,1,5,0,5-1,1-6,1-6-2-4-2,0a37.8,37.8,0,0,0,1,8s-1,3,1,2" />
+                                <path id="isol-trazo2" class="cls-2"
+                                    d="M.1,10.9s2,1,3-3c0,0-1,3,0,3s4-1,3-2,2-1,1,1-2,2-2,2,4-1,4-2,.5-1,1-1.4l1-.6s-3,2-1,4,3,1,3-1a4.4,4.4,0,0,0-1-3s-4,0-1,1,5,0,5-1,1-6,1-6-2-4-2,0a37.8,37.8,0,0,0,1,8s-1,3,1,2" />
+                            </g>
+                        </g>
+                    </svg> -->
+                    <h2>contacto</h2>
+                    <button>></button>
         </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
-    <script >
+    <script>
         gsap.to("body", {
-                duration: 2,
-                // y: 100,
-                backgroundColor: "#000",
-                borderRadius: "20px",
-                border: "0px solid white",
-                ease: "ease-in",
-                // padding: "10px",
-                // margin: "20px",
-                color: "#fff"
-            })
+            duration: 2,
+            // y: 100,
+            backgroundColor: "#000",
+            borderRadius: "20px",
+            border: "0px solid white",
+            ease: "ease-in",
+            // padding: "10px",
+            // margin: "20px",
+            color: "#fff",
+        });
+        /* gsap.to(".isol", {
+            // duration: 1,
+            // rotation: 180,
+            // skewY: 50,
+            duration: 3,
+            x: -300,
+            y: 100,
+            opacity: 0.5,
+            scale: 0.5
+        }); */
+        gsap.fromTo(".book", {
+            // height: 0,
+            width: 0,
+            // backgroundColor: "#fff",
+            x: -300,
+        },
+        {
+            duration: 1.5,
+            // height: "100%",
+            width: "100%",
+            // backgroundColor: "#000",
+            ease: "power3.out",
+            x: 0,
+        });
+        gsap.fromTo(".contacto", {
+            // height: 0,
+            width: 0,
+            // backgroundColor: "#fff",
+            x: 300,
+        },
+        {
+            duration: 1.5,
+            // height: "100%",
+            width: "100%",
+            // backgroundColor: "#000",
+            ease: "power3.out",
+            x: 0,
+        });
+        // gsap.to("#isol-trazo", { duration: 1, morphSVG: "#isol-trazo2" });
     </script>
 </body>
+
 </html>
