@@ -11,11 +11,11 @@
 
 <style>
     body{
-        background: salmon;
+        background: black;
     }
 </style>
 <body>
-    <section>
+    <section style="background: black;">
         <div class="izquierda">
             <p>Frontend</p>
             <p>UiDev</p>
@@ -37,7 +37,7 @@
     <section class="division">
         <div class="book">
             <h2>book</h2>
-            <button class="btn">
+            <button class="btn" id="book" onclick="book()">
                 <</button>
             </div>
             <div class="contacto">
@@ -72,7 +72,7 @@
         gsap.to("body", {
             duration: 2,
             // y: 100,
-            backgroundColor: "#000",
+            backgroundColor: "#fff",
             borderRadius: "20px",
             border: "0px solid white",
             ease: "ease-in",
@@ -90,20 +90,23 @@
             opacity: 0.5,
             scale: 0.5
         }); */
-        gsap.fromTo(".book", {
+        function book(){
+            gsap.fromTo(".book", {
             // height: 0,
             width: 0,
             // backgroundColor: "#fff",
-            x: -300,
+            x: 0,
         },
         {
             duration: 1.5,
             // height: "100%",
             width: "100%",
             // backgroundColor: "#000",
-            ease: "power3.out",
-            x: 0,
+            ease: "bounce.out",
+            x: "-95%",
         });
+        }
+        
         gsap.fromTo(".contacto", {
             // height: 0,
             width: 0,
