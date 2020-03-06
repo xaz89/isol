@@ -10,12 +10,13 @@
 </head>
 
 <style>
-    body{
+    body {
         background: black;
     }
 </style>
+
 <body>
-    <section style="background: black;">
+    <section class="inicio">
         <div class="izquierda">
             <p>Frontend</p>
             <p>UiDev</p>
@@ -23,6 +24,7 @@
         </div>
         <div class="centro">
             <!-- <h1>Hola, soy<br><span>ISOl</span></h1> -->
+            <!-- <h1 class="isol">ISOl</h1> -->
             <h1 class="isol">ISOl</h1>
             <!-- <p>frase mamalona</p> -->
         </div>
@@ -31,17 +33,14 @@
             <p>CSS</p>
             <p>JS</p>
         </div>
-
-
     </section>
     <section class="division">
         <div class="book">
-            <h2>book</h2>
-            <button class="btn" id="book" onclick="book()">
-                <</button>
-            </div>
-            <div class="contacto">
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.2 13.1">
+            <h2>uno</h2>
+            <button class="btn" id="book" onclick="book()"><</button>
+        </div>
+        <div class="contacto" style="border-left: 1px solid black;">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.2 13.1">
                         <defs>
                             <style>
                                 .cls-1 {
@@ -62,65 +61,124 @@
                             </g>
                         </g>
                     </svg> -->
-                    <h2>contacto</h2>
-                    <button>></button>
+            <h2>dos</h2>
+            <button class="btn" id="book" onclick="book()">></button>
         </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
     <script>
-        gsap.to("body", {
-            duration: 2,
-            // y: 100,
+        gsap.to(".inicio", {
+            duration: 1,
+            opacity: 1,
+            scale: 0.95
+        }, 1.5);
+        gsap.to(".isol", {
+            duration: 1,
+            opacity: 0.5,
+            scale: 200
+        });
+        var tl = gsap.timeline();
+        //sequenced one-after-the-other
+        tl.to("body", {
+            duration: 1,
             backgroundColor: "#fff",
             borderRadius: "20px",
             border: "0px solid white",
             ease: "ease-in",
-            // padding: "10px",
-            // margin: "20px",
             color: "#fff",
+            fill: "blue",
+        }) //notice that there's no semicolon!
+            .to(".isol", {
+                duration: 1,
+                opacity: 1,
+                scale: 1
+            }, 0.5)
+            .fromTo(".izquierda p", {
+                duration: 0,
+                x: "-1500%",
+            },
+                {
+                    stagger: {
+                        each: .05,
+                        from: "random"
+                    },
+                    x: 0,
+                }, 1)
+            .fromTo(".derecha p", {
+                duration: 0,
+                x: "1500%",
+            },
+                {
+                    stagger: 0.05,
+                    x: 0,
+                }, 1)
+        //   .to(".contacto", {duration: 3, rotation: 360});
+
+
+
+
+
+        /* gsap.to("body", {
+            duration: 2,
+            backgroundColor: "#fff",
+            borderRadius: "20px",
+            border: "0px solid white",
+            ease: "ease-in",
+            color: "#fff",
+            fill: "blue",
         });
-        /* gsap.to(".isol", {
-            // duration: 1,
-            // rotation: 180,
-            // skewY: 50,
-            duration: 3,
-            x: -300,
-            y: 100,
+         gsap.to(".isol", {
+            duration: 1,
             opacity: 0.5,
-            scale: 0.5
-        }); */
-        function book(){
+            scale: 2.5
+        });  */
+        function book() {
+            gsap.to("body", {
+                backgroundColor: "#f1f1f1",
+            });
             gsap.fromTo(".book", {
-            // height: 0,
-            width: 0,
-            // backgroundColor: "#fff",
-            x: 0,
-        },
-        {
-            duration: 1.5,
-            // height: "100%",
-            width: "100%",
-            // backgroundColor: "#000",
-            ease: "bounce.out",
-            x: "-95%",
-        });
-        }
-        
+                width: "100%",
+                x: 0,
+            },
+                {
+                    duration: 1.5,
+                    width: 0,
+                    ease: "power4",
+                    x: "-95%",
+                });
+            gsap.fromTo(".contacto", {
+                width: 0,
+                x: 0,
+            },
+                {
+                    duration: 1.5,
+                    width: "100%",
+                    ease: "power4",
+                    x: "95%",
+                });
+        };
+
         gsap.fromTo(".contacto", {
-            // height: 0,
             width: 0,
-            // backgroundColor: "#fff",
             x: 300,
         },
-        {
-            duration: 1.5,
-            // height: "100%",
-            width: "100%",
-            // backgroundColor: "#000",
-            ease: "power3.out",
-            x: 0,
-        });
+            {
+                duration: 1.5,
+                width: "100%",
+                ease: "power3.out",
+                x: 0,
+            });
+        gsap.fromTo(".book", {
+            width: 0,
+            x: -300,
+        },
+            {
+                duration: 1.5,
+                width: "100%",
+                ease: "power3.out",
+                x: 0,
+            });
         // gsap.to("#isol-trazo", { duration: 1, morphSVG: "#isol-trazo2" });
     </script>
 </body>
