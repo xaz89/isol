@@ -5,182 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="./css/ejercicio.css"> -->
     <link rel="stylesheet" href="./css/isol.css">
     <title>ISOL</title>
 </head>
 
-<style>
-    body {
-        background: black;
-    }
-</style>
 
 <body>
+
+
+
+
+
     <section class="inicio">
+        <div class="menu">
+            <a onclick="menu()">o o o</a>
+            <nav  id="nav">
+                <a href="">uno</a>
+                <a href="">dos</a>
+                <a href="">tres</a>
+            </nav>
+        </div>
         <div class="izquierda">
             <p>Frontend</p>
             <p>UiDev</p>
             <p>UX</p>
         </div>
         <div class="centro">
-            <!-- <h1>Hola, soy<br><span>ISOl</span></h1> -->
-            <!-- <h1 class="isol">ISOl</h1> -->
-            <h1 class="isol">ISOl</h1>
-            <!-- <p>frase mamalona</p> -->
+            <h1 class="isol"><a href="">( ͡° ͜ʖ ͡°)</a> </h1>
         </div>
         <div class="derecha">
             <p>HTML</p>
             <p>CSS</p>
             <p>JS</p>
         </div>
+        
+       
     </section>
-    <section class="division">
+    <a href="#division" class="abajo">
+        Abajo
+    </a>
+    <section id="division" class="division">
         <div class="book">
             <h2>uno</h2>
-            <button class="btn" id="book" onclick="book()"><</button>
+            <button class="btn" id="book" onclick="book()">
+                <
+                </button>
         </div>
-        <div class="contacto" style="border-left: 1px solid black;">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.2 13.1">
-                        <defs>
-                            <style>
-                                .cls-1 {
-                                    fill: none;
-                                    stroke: #000;
-                                    stroke-miterlimit: 10;
-                                    stroke-width: 0.25px;
-                                }
-                            </style>
-                        </defs>
-                        <title>isol-trazo</title>
-                        <g id="Capa_2" data-name="Capa 2">
-                            <g id="Capa_2-2" data-name="Capa 2">
-                                <path id="isol-trazo" class="cls-1"
-                                    d="M.1,101.9s2,1,3-3c0,0-1,3,0,3s4-1,3-2,2-1,1,1-2,2-2,2,4-1,4-2,.5-1,1-1.4l1-.6s-3,2-1,4,3,1,3-1a4.4,4.4,0,0,0-1-3s-4,0-1,1,5,0,5-1,1-6,1-6-2-4-2,0a37.8,37.8,0,0,0,1,8s-1,3,1,2" />
-                                <path id="isol-trazo2" class="cls-2"
-                                    d="M.1,10.9s2,1,3-3c0,0-1,3,0,3s4-1,3-2,2-1,1,1-2,2-2,2,4-1,4-2,.5-1,1-1.4l1-.6s-3,2-1,4,3,1,3-1a4.4,4.4,0,0,0-1-3s-4,0-1,1,5,0,5-1,1-6,1-6-2-4-2,0a37.8,37.8,0,0,0,1,8s-1,3,1,2" />
-                            </g>
-                        </g>
-                    </svg> -->
+        <div class="contacto">
             <h2>dos</h2>
             <button class="btn" id="book" onclick="book()">></button>
         </div>
     </section>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
-    <script>
-        gsap.to(".inicio", {
-            duration: 1,
-            opacity: 1,
-            scale: 0.95
-        }, 1.5);
-        gsap.to(".isol", {
-            duration: 1,
-            opacity: 0.5,
-            scale: 200
-        });
-        var tl = gsap.timeline();
-        //sequenced one-after-the-other
-        tl.to("body", {
-            duration: 1,
-            backgroundColor: "#fff",
-            borderRadius: "20px",
-            border: "0px solid white",
-            ease: "ease-in",
-            color: "#fff",
-            fill: "blue",
-        }) //notice that there's no semicolon!
-            .to(".isol", {
-                duration: 1,
-                opacity: 1,
-                scale: 1
-            }, 0.5)
-            .fromTo(".izquierda p", {
-                duration: 0,
-                x: "-1500%",
-            },
-                {
-                    stagger: {
-                        each: .05,
-                        from: "random"
-                    },
-                    x: 0,
-                }, 1)
-            .fromTo(".derecha p", {
-                duration: 0,
-                x: "1500%",
-            },
-                {
-                    stagger: 0.05,
-                    x: 0,
-                }, 1)
-        //   .to(".contacto", {duration: 3, rotation: 360});
-
-
-
-
-
-        /* gsap.to("body", {
-            duration: 2,
-            backgroundColor: "#fff",
-            borderRadius: "20px",
-            border: "0px solid white",
-            ease: "ease-in",
-            color: "#fff",
-            fill: "blue",
-        });
-         gsap.to(".isol", {
-            duration: 1,
-            opacity: 0.5,
-            scale: 2.5
-        });  */
-        function book() {
-            gsap.to("body", {
-                backgroundColor: "#f1f1f1",
-            });
-            gsap.fromTo(".book", {
-                width: "100%",
-                x: 0,
-            },
-                {
-                    duration: 1.5,
-                    width: 0,
-                    ease: "power4",
-                    x: "-95%",
-                });
-            gsap.fromTo(".contacto", {
-                width: 0,
-                x: 0,
-            },
-                {
-                    duration: 1.5,
-                    width: "100%",
-                    ease: "power4",
-                    x: "95%",
-                });
-        };
-
-        gsap.fromTo(".contacto", {
-            width: 0,
-            x: 300,
-        },
-            {
-                duration: 1.5,
-                width: "100%",
-                ease: "power3.out",
-                x: 0,
-            });
-        gsap.fromTo(".book", {
-            width: 0,
-            x: -300,
-        },
-            {
-                duration: 1.5,
-                width: "100%",
-                ease: "power3.out",
-                x: 0,
-            });
-        // gsap.to("#isol-trazo", { duration: 1, morphSVG: "#isol-trazo2" });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="menu.js"></script>
+    <script src="isol.js"></script>
+    <!-- <script src="main.js"></script> -->
 </body>
 
 </html>

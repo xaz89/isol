@@ -3,12 +3,17 @@ body,
 * {
   padding: 0;
   margin: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
+  
+}
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   position: absolute;
   color: black;
+  background: black;
   width: 100%;
   height: 100%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -38,8 +43,90 @@ section {
   width: 100%;
   height: 100%;
 }
+
+.menu {
+  position: absolute;
+        z-index: 1;
+        right: 0;
+        text-align: right;
+        padding: 1rem;
+        top: 0;
+        cursor: pointer;
+        width: 100%;
+        // height: 97%;
+        a{
+          color: white; z-index: 0;
+        }
+}
+
+#nav {
+    display: none;
+    background-color:transparentize($color: white,$amount: 0.1);
+    right: 1rem;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    // height: 97%;
+    padding-top: 36vh;
+    padding-bottom: 36vh;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    
+    a
+{
+    color: black;
+    font-size: 5rem;
+    text-decoration: none;
+    padding: 1rem;
+    transition: all 0.15s;
+    -webkit-transition: all 0.15s;
+    -moz-transition: all 0.15s;
+    -ms-transition: all 0.15s;
+    -o-transition: all 0.15s;
+    &:hover{
+      // font-size: 4rem;
+      font-weight: 700;
+    }
+  }
+}
 .inicio {
   background-color: black;
+}
+
+.isol a {
+  color: transparent;
+  background-image: linear-gradient(to right, #ff4d00, #ffae00, #ff4d00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: letras 10s linear infinite;
+  -webkit-animation: letras 10s linear infinite;
+  background-size: 50%;
+}
+.abajo {
+  position: absolute;
+    z-index: 1;
+    text-align: center;
+    padding: 1rem;
+    bottom: 5%;
+    cursor: pointer;
+    width: 100%;
+    text-decoration: none;
+      color: white;
+    
+}
+@keyframes letras {
+  0%{
+    background-position: 0% 100%;
+  }
+  /* 50%{
+    background-position: 100% 0%;
+  } */
+  100%{
+    background-position: 100% 0%;
+  }
 }
 
 .division {
@@ -208,6 +295,10 @@ p {
     font-size: 15px;
     letter-spacing: 3px;
   }
+}
+
+.contacto {
+  border-left: 1px solid black;
 }
 
 button {
