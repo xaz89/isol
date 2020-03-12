@@ -68,7 +68,7 @@
  });  */
 function book() {
     gsap.to("body", {
-        backgroundColor: "#f1f1f1",
+        backgroundColor: "#fff",
     });
     gsap.fromTo(".book", {
         width: "100%",
