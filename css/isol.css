@@ -528,6 +528,10 @@ button {
     background-position-x: right;
   }
 
+  #nav {
+    flex-direction: column;
+  }
+
   .division {
     flex-direction: column;
   }

@@ -595,9 +595,13 @@ button {
 
 
 @media (max-width: 576px) { 
+
   .inicio {
     background-position-x: right;
   }
+  #nav {
+    flex-direction: column;
+      }
   .division {
     flex-direction: column;
   }
