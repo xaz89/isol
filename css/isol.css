@@ -98,12 +98,27 @@ section {
 }
 
 .inicio {
-  background-color: #e6e6e6;
   background-blend-mode: multiply;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/background.jpg");
   background-size: cover;
 }
 .inicio.show {
   width: 100%;
+}
+
+.portfolio {
+  position: relative;
+}
+.portfolio img:first-child {
+  position: absolute;
+}
+.portfolio .parent {
+  width: 50em;
+}
+.portfolio .child {
+  width: 10em;
+  left: -10%;
+  bottom: -5%;
 }
 
 .isol a {
@@ -114,6 +129,8 @@ section {
   animation: letras 3s linear infinite;
   -webkit-animation: letras 3s linear infinite;
   background-size: 50%;
+  font-family: "Play", sans-serif;
+  font-size: 17rem;
 }
 
 .abajo {
@@ -129,6 +146,13 @@ section {
   font-size: 2rem;
   animation: flota 1.2s linear infinite;
   -webkit-animation: flota 1.2s linear infinite;
+}
+
+.book-svg {
+  position: absolute;
+  z-index: 2;
+  right: 45px;
+  width: 70px;
 }
 
 @keyframes letras {
