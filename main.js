@@ -8,13 +8,13 @@ var scene = new ScrollMagic.Scene({
   reverse: true,
 })
 .setClassToggle('.contacto', 'entra')
-.addIndicators({
+/* .addIndicators({
   name: 'fade scene',
   colorTrigger: 'gray',
   colorStart: 'blue',
   colorEnd: 'blue',
-  // indent: 20
-})
+  indent: 20
+}) */
 .addTo(controller);
 
 
