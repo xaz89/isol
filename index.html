@@ -26,6 +26,10 @@
 
 <body>
 
+    <div class="preload-wrapper">
+        <div class="preload-block"></div>
+    </div>
+
 
 
 
@@ -140,6 +144,18 @@ $(".wrapper").each(function() {
 });
 
     </script>
+
+
+<script>
+
+document.body.onload = function(){
+  let wrap = document.getElementsByClassName('preload-wrapper')[0];
+  if(wrap.classList.contains('load')) return;
+
+  setTimeout(()=> wrap.classList.add('load'), 5);
+
+}
+</script>
 </body>
 
 </html>
