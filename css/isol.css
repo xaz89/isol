@@ -523,6 +523,39 @@ button {
     margin-bottom: 0;
   }
 }
+@media (max-width: 576px) {
+  .inicio {
+    background-position-x: right;
+  }
+
+  .division {
+    flex-direction: column;
+  }
+
+  .isol a {
+    font-size: 100%;
+  }
+
+  .centro p {
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .portfolio .parent {
+    width: 70%;
+    margin-right: 10%;
+  }
+  .portfolio .child {
+    left: 0%;
+    width: 20%;
+    bottom: -25%;
+  }
+
+  .book-svg {
+    display: none;
+  }
+}
 .preload-wrapper {
   z-index: 9999;
   top: 0;
