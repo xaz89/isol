@@ -130,7 +130,7 @@ section {
   border: 1px solid gray;
   bottom: -25%;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 .portfolio .child::after {
   content: "";
