@@ -640,6 +640,10 @@ button {
   .book-svg {
     display: none;
   }
+
+  .child {
+    display: none;
+  }
 }
 .preload-wrapper {
   z-index: 9999;
