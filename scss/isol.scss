@@ -169,15 +169,19 @@ background-image: linear-gradient(
 
        width: 15vh;
        height: 15vh;
-       border-radius: 50%;
+       border-radius: 50%; 
+       background-color: transparent;
       
       
       
-      /*  width: 1px;
-      height: 15vh; */
+      /*  width: 50vh;
+      height: 2px;
+      bottom: -15vh;
+      left: -55vh;
+      background-color: black; */
       
-      background-color: transparent;
       border: 1px solid lighten($color: black, $amount: 50);
+     
       bottom: -25%;
       position: absolute;
       z-index: 1;

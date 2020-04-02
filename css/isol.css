@@ -124,9 +124,12 @@ section {
   width: 15vh;
   height: 15vh;
   border-radius: 50%;
-  /*  width: 1px;
-  height: 15vh; */
   background-color: transparent;
+  /*  width: 50vh;
+  height: 2px;
+  bottom: -15vh;
+  left: -55vh;
+  background-color: black; */
   border: 1px solid gray;
   bottom: -25%;
   position: absolute;

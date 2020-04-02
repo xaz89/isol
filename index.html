@@ -94,9 +94,12 @@
 <section id="portafolio" class="portafolio">
     <img src="./img/book.svg" class="book-svg">
     <div class="portfolio wrapper">
-        <div class="child"></div>
+        <img class="child2" src="./img/circulos3.png" alt="" srcset="" style="bottom: -100%;left: 5%;position: absolute; width: 150%;">
+        <!-- <img class="child2" src="./img/circulos4.png" alt="" srcset="" style="bottom: -100%;left: 5%;position: absolute; width: 150%;"> -->
+        <img class="ptos" src="./img/fondo2.jpg" alt="" srcset="" style="bottom: -150%;left: -25%;position: absolute; width: 150%; height: 350%; opacity: 01;">
+        <!-- <div class="child"></div> -->
         <!-- <img src="./img/phone.jpg" alt="" srcset="" class="child-"> -->
-    <img src="./img/lms.jpg" alt=""  class="parent" ><br>
+        <img src="./img/lms.jpg" alt=""  class="parent" ><br>
     </div>
     <br>
     <p>Propuesta gráfica y producción de sitio web</p>
@@ -106,6 +109,8 @@
 <section id="portafolio" class="portafolio">
     <img src="./img/book.svg" class="book-svg">
     <div class="portfolio wrapper">
+        <img class="ptos" src="./img/fondo2.jpg" alt="" srcset="" style="bottom: -150%;left: -25%;position: absolute; width: 150%; height: 350%; opacity: 01;">
+        <!-- <img class="child2" src="./img/circulos3.png" alt="" srcset="" style="bottom: -100%;left: 25%;"> -->
         <div class="child"></div>
         <!-- <img src="./img/phone.jpg" alt="" srcset="" class="child"> -->
     <!-- <img src="./img/desktop.jpg" alt="" width="100%" class="parent" ><br> -->
@@ -119,6 +124,8 @@
 <section id="portafolio" class="portafolio">
     <img src="./img/book.svg" class="book-svg">
     <div class="portfolio wrapper">
+        <img class="ptos" src="./img/fondo2.jpg" alt="" srcset="" style="bottom: -100%;left: -25%;position: absolute; width: 150%; height: 250%; opacity: 0.1;">
+        <!-- <img class="child2" src="./img/circulos3.png" alt="" srcset="" style="bottom: -125%;left: 25%;"> -->
         <div class="child"></div>
     <img src="./img/vw.jpg" alt="" class="parent" ><br>
     </div>
@@ -170,8 +177,31 @@
 
 $(".wrapper").each(function() {
   var tl = new TimelineMax();
-  var child = $(this).find(".child");
+  var child = $(this).find(".child, .child2");
+//   tl.to(child, 1, {  duration: 3, x:"450%", rotation: 0, backgroundColor: "aliceblue", ease: Linear.easeNone });
   tl.to(child, 1, { y: -580, x:-180, rotation: 45, backgroundColor: "aliceblue", ease: Linear.easeNone });
+
+  var scene = new ScrollMagic.Scene({   
+    triggerElement: this,
+    triggerHook: 0.4,
+    duration: "100%"
+  })
+    .setTween(tl)
+    /* .addIndicators({
+      colorTrigger: "black",
+      colorStart: "black",
+      colorEnd: "black",
+      indent: 10
+    }) */
+    .addTo(controller);
+});
+
+
+$(".wrapper").each(function() {
+  var tl = new TimelineMax();
+  var child = $(this).find(".ptos");
+//   tl.to(child, 1, {  duration: 3, x:"450%", rotation: 0, backgroundColor: "aliceblue", ease: Linear.easeNone });
+  tl.to(child, 1, { y: -580,  backgroundColor: "aliceblue", ease: Linear.easeNone });
 
   var scene = new ScrollMagic.Scene({   
     triggerElement: this,
