@@ -180,7 +180,7 @@ background-image: linear-gradient(
       left: -55vh;
       background-color: black; */
       
-      border: 1px solid lighten($color: black, $amount: 50);
+      border: 1px solid lighten($color: black, $amount: 80);
      
       bottom: -25%;
       position: absolute;
@@ -189,7 +189,7 @@ background-image: linear-gradient(
       &::after{
         content: "";
         background-color: transparent;
-      border: 1px solid lighten($color: black, $amount: 50);
+      border: 1px solid lighten($color: black, $amount: 80);
          width: 30vh;
          height: 30vh;
          border-radius: 50%;
@@ -203,7 +203,7 @@ background-image: linear-gradient(
       &::before{
         content: "";
         background-color: transparent;
-      border: 1px solid lighten($color: black, $amount: 50);
+      border: 1px solid lighten($color: black, $amount: 80);
         width: 20vh;
         height: 20vh;
         border-radius: 50%;
