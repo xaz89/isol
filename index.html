@@ -184,7 +184,7 @@ $(".wrapper").each(function() {
   var tl = new TimelineMax();
   var child = $(this).find(".child, .child2");
 //   tl.to(child, 1, {  duration: 3, x:"450%", rotation: 0, backgroundColor: "aliceblue", ease: Linear.easeNone });
-  tl.to(child, 1, { y: -580, x:-180, rotation: 45, backgroundColor: "aliceblue", ease: Linear.easeNone });
+  tl.to(child, 1, { y: -580, x:-180, rotation: 45, backgroundColor: "aliceblue", opacity: 0, ease: Linear.easeNone });
 
   var scene = new ScrollMagic.Scene({   
     triggerElement: this,
