@@ -285,8 +285,10 @@ background-image: linear-gradient(
 .btn-negro{
   padding: 0 2em;
       margin: 1.5em;
-      line-height: 4;
+      line-height: 3;
       position: relative;
+      border-style: solid;
+      border-width: 1px;
       border-color: gray;
 color: black;
        background-color: white;
@@ -295,6 +297,7 @@ color: black;
    
      
       z-index: 1;
+      text-decoration: none;
         &:before {
           content: "";
           display: block;
@@ -552,6 +555,7 @@ button {
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: center;
+  position: relative;
  
 }
 .portafolio, .redes {
@@ -819,3 +823,32 @@ button {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+
+
+.ptos-gral {
+  top: -150%;left: -25%;position: absolute; width: 100%; height: 100vh; opacity: 0.1;
+  }
+.ptos {
+  bottom: -150%;left:-50%;position: absolute; width: 200%; height: 350%; opacity: 0.1;
+  }
+
+#nav {
+  display: none; opacity: 0; transform: translate(100%,0px);
+}
+
+.blanco-arriba {
+  position: absolute;z-index: 1;top: 0;
+}
+
+.blanco-abajo{
+  position: absolute;z-index: 0;bottom: 0;-webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    width: 100%;
+}
+
+.child2{
+  bottom: -100%;left: 5%;position: absolute; width: 150%;opacity:0.2;
+}
+

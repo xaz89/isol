@@ -7,7 +7,7 @@ var scene = new ScrollMagic.Scene({
   triggerHook: 0.25,
   reverse: true,
 })
-.setClassToggle('.contacto', 'entra')
+.setClassToggle('.contacto', '.entra')
 /* .addIndicators({
   name: 'fade scene',
   colorTrigger: 'gray',
