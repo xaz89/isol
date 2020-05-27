@@ -725,6 +725,30 @@ button {
 }
 
 
+
+.whats {
+
+  cursor: pointer;
+
+
+
+bottom: 18pt;
+display: inline;
+height: 45pt;
+padding: 0px;
+position: fixed;
+left: 18pt;
+top: auto;
+width: 45pt;
+z-index: 2147483646;
+
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 @media (max-width: 576px) { 
 
   .inicio {
