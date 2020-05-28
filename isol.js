@@ -5,9 +5,9 @@
 
  }, 1.5);
  gsap.to(".isol", {
-     duration: 1,
+     duration: 0,
      opacity: 0.5,
-     scale: 200,
+     scale: 10,
 
  });
  var tl = gsap.timeline();

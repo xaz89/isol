@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 * {
@@ -164,10 +165,12 @@ section {
 }
 
 .isol a {
-  color: transparent;
-  background: linear-gradient(to left, #b3b3b3, #fff 10%, #fff 100%, #b3b3b3 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
+  /* ESTO ES POR LA ANIMACIÓN    background: linear-gradient(to left, lighten(#000, 70%),  #fff 10%, #fff 100%, lighten(#000, 70%) 50%);
+     background-clip: text;
+     -webkit-background-clip: text; 
+    color: transparent; */
+  color: white;
+  text-decoration: none;
   animation: letras 3s linear infinite;
   -webkit-animation: letras 3s linear infinite;
   background-size: 50%;
@@ -176,18 +179,28 @@ section {
 }
 
 .abajo {
+  border: 1px solid rgba(255, 255, 255, 0.666);
+  border-radius: 1.25rem;
   position: absolute;
   z-index: 1;
   text-align: center;
-  padding: 1rem;
-  bottom: 5%;
+  padding: 0.75rem 0.5rem;
+  bottom: 10%;
+  left: auto;
+  right: 50%;
   cursor: pointer;
-  width: 100%;
+  width: auto;
   text-decoration: none;
   color: white;
   font-size: 2rem;
   animation: flota 1.2s linear infinite;
   -webkit-animation: flota 1.2s linear infinite;
+  transition: all 0.25s;
+}
+.abajo:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.25s;
 }
 
 .book-svg {

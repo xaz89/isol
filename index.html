@@ -251,12 +251,7 @@ $(".wrapper").each(function() {
     duration: "100%"
   })
     .setTween(tl)
-    /* .addIndicators({
-      colorTrigger: "black",
-      colorStart: "black",
-      colorEnd: "black",
-      indent: 10
-    }) */
+    
     .addTo(controller);
 });
 
@@ -264,8 +259,7 @@ $(".wrapper").each(function() {
 $(".wrapper").each(function() {
   var tl = new TimelineMax();
   var child = $(this).find(".ptos");
-//   tl.to(child, 1, {  duration: 3, x:"450%", rotation: 0, backgroundColor: "aliceblue", ease: Linear.easeNone });
-  tl.to(child, 1, { y: "25%",  backgroundColor: "aliceblue", ease: Linear.easeNone });
+tl.to(child, 1, { y: "25%",  backgroundColor: "aliceblue", ease: Linear.easeNone });
 
   var scene = new ScrollMagic.Scene({   
     triggerElement: this,
@@ -273,12 +267,7 @@ $(".wrapper").each(function() {
     duration: "100%"
   })
     .setTween(tl)
-    /* .addIndicators({
-      colorTrigger: "black",
-      colorStart: "black",
-      colorEnd: "black",
-      indent: 10
-    }) */
+
     .addTo(controller);
 });
 
@@ -287,8 +276,7 @@ $(".wrapper").each(function() {
 $(".wrapper").each(function() {
   var tl = new TimelineMax();
   var child = $(this).find(".ptos2");
-//   tl.to(child, 1, {  duration: 3, x:"450%", rotation: 0, backgroundColor: "aliceblue", ease: Linear.easeNone });
-  tl.to(child, 1, { x: "125%",  opacity: 0, ease: Linear.easeNone });
+tl.to(child, 1, { x: "125%",  opacity: 0, ease: Linear.easeNone });
 
   var scene = new ScrollMagic.Scene({   
     triggerElement: this,
@@ -296,18 +284,12 @@ $(".wrapper").each(function() {
     duration: "100%"
   })
     .setTween(tl)
-    /* .addIndicators({
-      colorTrigger: "black",
-      colorStart: "black",
-      colorEnd: "black",
-      indent: 10
-    }) */
+
     .addTo(controller);
 });
 
 
 $(document).on("click", ".abrir", function() {
-    // var tl = new TimelineMax();
     var menu = $(".menu").find("#nav");
     tl.to(menu, 0.1, { display: "flex", opacity: 1, x: 0, ease: Linear.easeNone });
 
@@ -316,13 +298,6 @@ $(document).on("click", ".abrir", function() {
     triggerHook: 0,
     duration: "100%"
   })
-//   .setTween(tl)
-    /* .addIndicators({
-      colorTrigger: "black",
-      colorStart: "black",
-      colorEnd: "black",
-      indent: 10
-    }) */
     .addTo(controller);
 
 });
@@ -358,7 +333,7 @@ document.body.onload = function(){
   let wrap = document.getElementsByClassName('preload-wrapper')[0];
   if(wrap.classList.contains('load')) return;
 
-  setTimeout(()=> wrap.classList.add('load'), 5);
+  setTimeout(()=> wrap.classList.add('load'), 2);
 
 }
 </script>
