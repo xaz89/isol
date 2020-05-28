@@ -203,6 +203,10 @@ section {
   transition: all 0.25s;
 }
 
+.abajo.dos {
+  display: none;
+}
+
 .book-svg {
   position: absolute;
   z-index: 2;
@@ -644,6 +648,15 @@ button {
 }
 
 @media (max-width: 576px) {
+  .abajo {
+    display: none;
+  }
+
+  .abajo.dos {
+    display: block;
+    right: 45%;
+  }
+
   .inicio {
     background-position-x: right;
   }
@@ -654,6 +667,7 @@ button {
 
   .division {
     flex-direction: column;
+    display: none;
   }
 
   .isol a {

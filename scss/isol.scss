@@ -275,6 +275,11 @@ right: 50%;
     
 }
 
+
+.abajo.dos{
+  display: none;
+}
+
 .book-svg {
   position: absolute;
     z-index: 2;
@@ -766,6 +771,14 @@ z-index: 2147483646;
 
 @media (max-width: 576px) { 
 
+  .abajo{
+    display: none;
+  }
+  .abajo.dos{
+    display: block;
+    right: 45%;
+  }
+
   .inicio {
     background-position-x: right;
   }
@@ -774,6 +787,7 @@ z-index: 2147483646;
       }
   .division {
     flex-direction: column;
+    display: none;
   }
   .isol {
     a{
