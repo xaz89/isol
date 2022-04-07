@@ -119,6 +119,11 @@ section {
   z-index: 1;
   position: relative;
 }
+.portfolio img.parent{
+  max-height: 400px;
+  width: 100%;
+  
+}
 .portfolio .child {
   /*  width: 10em;
    left: -10%;
