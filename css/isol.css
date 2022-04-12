@@ -820,3 +820,29 @@ button {
 }
 
 /*# sourceMappingURL=isol.css.map */
+
+
+
+.wave {
+  transition: 1.5s ease;
+  display: inline-block;
+  animation-name: waveHand;
+  animation-iteration-count: infinite;
+  animation-duration: 1.3s;
+  animation-timing-function: ease;
+  transform-origin: 90% 80%;
+  opacity: 1;
+  font-size: 25px;
+}
+
+@keyframes waveHand {
+  0% {
+      transform: rotate(7deg);
+  }
+  50% {
+      transform: rotate(-7deg);
+  }
+  100% {
+      transform: rotate(7deg);
+  }
+}
